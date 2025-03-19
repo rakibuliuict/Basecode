@@ -11,7 +11,7 @@ class LAHeart(Dataset):
     """ LA Dataset """
 
     def __init__(self, data_dir, list_dir, split, reverse=False, logging=None):
-        self.data_dir = data_dir + "/2018LA_Seg_Training Set"
+        self.data_dir = data_dir + "/Training Set"
         self.list_dir = list_dir
         self.split = split
         self.reverse = reverse
@@ -145,8 +145,8 @@ class ToTensor(object):
 
 
 if __name__ == '__main__':
-    data_dir = '../../../Datasets/LA_dataset'
-    list_dir = '../datalist/LA'
+    data_dir = r'G:\My Drive\SemiSL\Dataset\2018_UTAH_MICCAI'
+    list_dir = r'G:\My Drive\SemiSL\Code\Basecode\Datasets\la\data_split'
     labset = LAHeart(data_dir, list_dir,split='lab')
     unlabset = LAHeart(data_dir,list_dir,split='unlab')
     trainset = LAHeart(data_dir,list_dir,split='train')
