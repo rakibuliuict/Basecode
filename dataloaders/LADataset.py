@@ -5,12 +5,13 @@ from torch.utils.data import Dataset
 import h5py
 from torch.utils.data.sampler import Sampler
 from torchvision.transforms import Compose
+import logging
 
 
 class LAHeart(Dataset):
     """ LA Dataset """
 
-    def __init__(self, data_dir, list_dir, split, reverse=False, logging=None):
+    def __init__(self, data_dir, list_dir, split, reverse=False, logging=logging):
         self.data_dir = data_dir + "/Training Set"
         self.list_dir = list_dir
         self.split = split
