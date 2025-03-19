@@ -1,5 +1,5 @@
 from asyncore import write
-import imp
+# import imp
 import os
 from sre_parse import SPECIAL_CHARS
 import sys
@@ -36,7 +36,7 @@ from pancreas.Vnet import VNet
 from networks.ResVNet import ResVNet
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--root_path', type=str, default='./Datasets/la/data', help='Name of Dataset')
+parser.add_argument('--root_path', type=str, default='/content/drive/MyDrive/SemiSL/Dataset/2018_UTAH_MICCAI', help='Name of Dataset')
 parser.add_argument('--exp', type=str, default='SDCL', help='exp_name')
 parser.add_argument('--model', type=str, default='VNet', help='model_name')
 parser.add_argument('--pre_max_iteration', type=int, default=2000, help='maximum pre-train iteration to train')
