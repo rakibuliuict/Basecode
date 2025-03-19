@@ -169,10 +169,16 @@ if __name__ == '__main__':
     print(len(testset), test_sample[0].shape, test_sample[1].shape) # 20 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
 
 
-    labset = LAHeart(data_dir, list_dir,split='lab', aug_times=5)
-    unlabset = LAHeart(data_dir,list_dir,split='unlab', aug_times=5)
-    trainset = LAHeart(data_dir,list_dir,split='train', aug_times=5)
-    testset = LAHeart(data_dir, list_dir,split='test', aug_times=5)
+    # labset = LAHeart(data_dir, list_dir,split='lab', aug_times=5)
+    # unlabset = LAHeart(data_dir,list_dir,split='unlab', aug_times=5)
+    # trainset = LAHeart(data_dir,list_dir,split='train', aug_times=5)
+    # testset = LAHeart(data_dir, list_dir,split='test', aug_times=5)
+
+    labset = LAHeart(data_dir, list_dir, split='lab')  # No aug_times
+    unlabset = LAHeart(data_dir, list_dir, split='unlab')
+    trainset = LAHeart(data_dir, list_dir, split='train')
+    testset = LAHeart(data_dir, list_dir, split='test')
+
 
     lab_sample = labset[0]
     unlab_sample = unlabset[0]
