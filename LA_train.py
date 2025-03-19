@@ -461,8 +461,8 @@ def self_train(args, pre_snapshot_path, self_snapshot_path):
 
 if __name__ == "__main__":
     ## make logger file
-    pre_snapshot_path = "./model/SDCL/LA_{}_{}_labeled/pre_train".format(args.exp, args.labelnum)
-    self_snapshot_path = "./model/SDCL/LA_{}_{}_labeled/self_train".format(args.exp, args.labelnum)
+    pre_snapshot_path = "/content/drive/MyDrive/SemiSL/Code/Basecode/model/SDCL/LA_{}_{}_labeled/pre_train".format(args.exp, args.labelnum)
+    self_snapshot_path = "/content/drive/MyDrive/SemiSL/Code/Basecode/model/SDCL/LA_{}_{}_labeled/self_train".format(args.exp, args.labelnum)
     print("Starting SDCL training.")
     for snapshot_path in [pre_snapshot_path, self_snapshot_path]:
         if not os.path.exists(snapshot_path):
