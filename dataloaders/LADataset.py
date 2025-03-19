@@ -158,10 +158,15 @@ if __name__ == '__main__':
     train_sample = trainset[0] 
     test_sample = testset[0]
 
-    print(len(labset), lab_sample['image'].shape, lab_sample['label'].shape)  # 16 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
-    print(len(unlabset), unlab_sample['image'].shape, unlab_sample['label'].shape) # 64 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
-    print(len(trainset), train_sample['image'].shape, train_sample['label'].shape) # 80 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
-    print(len(testset), test_sample['image'].shape, test_sample['label'].shape) # 20 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    # print(len(labset), lab_sample['image'].shape, lab_sample['label'].shape)  # 16 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    # print(len(unlabset), unlab_sample['image'].shape, unlab_sample['label'].shape) # 64 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    # print(len(trainset), train_sample['image'].shape, train_sample['label'].shape) # 80 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    # print(len(testset), test_sample['image'].shape, test_sample['label'].shape) # 20 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+
+    print(len(labset), lab_sample[0].shape, lab_sample[1].shape)  # 16 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    print(len(unlabset), unlab_sample[0].shape, unlab_sample[1].shape) # 64 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    print(len(trainset), train_sample[0].shape, train_sample[1].shape) # 80 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
+    print(len(testset), test_sample[0].shape, test_sample[1].shape) # 20 torch.Size([1, 112, 112, 80]) torch.Size([112, 112, 80])
 
 
     labset = LAHeart(data_dir, list_dir,split='lab', aug_times=5)
